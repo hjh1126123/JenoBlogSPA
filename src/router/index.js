@@ -3,27 +3,29 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-// route-level code splitting
-// const createListView = id => () => import('../views/CreateListView').then(m => m.default(id));
+import home from './modules/home'
+import web from './modules/web'
+import desktop from './modules/desktop'
+import server from './modules/server'
+import unity from './modules/unity'
 
-const home = () => import('../views/home.vue');
+const router = new Router({
+    mode: 'history',
+    fallback: false,
+    scrollBehavior: () => ({y: 0}),
+    routes: [
+        {
+            path: '/',
+            redirect: '/home'
+        },
+        ...home,
+        ...web,
+        ...desktop,
+        ...server,
+        ...unity
+    ]
+});
 
 export function createRouter() {
-    return new Router({
-        mode: 'history',
-        fallback: false,
-        scrollBehavior: () => ({y: 0}),
-        routes: [
-            // { path: '/top/:page(\\d+)?', component: createListView('top') },
-            // { path: '/new/:page(\\d+)?', component: createListView('new') },
-            // { path: '/show/:page(\\d+)?', component: createListView('show') },
-            // { path: '/ask/:page(\\d+)?', component: createListView('ask') },
-            // { path: '/job/:page(\\d+)?', component: createListView('job') },
-            {path: '/', redirect: '/home'},
-            {
-                path: '/home',
-                component: home
-            }
-        ]
-    })
+    return router;
 }

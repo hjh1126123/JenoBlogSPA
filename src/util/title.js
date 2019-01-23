@@ -1,5 +1,5 @@
 function getTitle (vm) {
-  const { title } = vm.$options
+  const { title } = vm.$options;
   if (title) {
     return typeof title === 'function'
       ? title.call(vm)
@@ -9,21 +9,21 @@ function getTitle (vm) {
 
 const serverTitleMixin = {
   created () {
-    const title = getTitle(this)
+    const title = getTitle(this);
     if (title) {
-      this.$ssrContext.title = `Vue HN 2.0 | ${title}`
+      this.$ssrContext.title = `Jeho的个人博客 | ${title}`
     }
   }
-}
+};
 
 const clientTitleMixin = {
   mounted () {
-    const title = getTitle(this)
+    const title = getTitle(this);
     if (title) {
-      document.title = `Vue HN 2.0 | ${title}`
+      document.title = `Jeho的个人博客 | ${title}`
     }
   }
-}
+};
 
 export default process.env.VUE_ENV === 'server'
   ? serverTitleMixin
