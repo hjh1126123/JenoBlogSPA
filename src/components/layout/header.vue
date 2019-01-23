@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="header">
+
+    </div>
 </template>
 
 <script>
@@ -32,6 +34,10 @@
     }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
+    @import "~styles/theme.styl"
 
+    .header {
+        width 100%;
+    }
 </style>

@@ -1,4 +1,4 @@
-const index = () => import('../../views/desktop/index.vue');
+const index = () => import('views/desktop/index.vue');
 
 export default [
     {
