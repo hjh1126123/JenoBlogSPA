@@ -18,22 +18,14 @@
         filters: {},
         components: {},
         computed: {},
-        mounted() {
-        },
-        beforeDestroy() {
-        },
-        beforeCreate() {
-        },
-        created() {
-        },
-        beforeMount() {
-        },
-        beforeUpdate() {
-        },
-        updated() {
-        },
-        destroyed() {
-        }
+        mounted() {},
+        beforeDestroy() {},
+        beforeCreate() {},
+        created() {},
+        beforeMount() {},
+        beforeUpdate() {},
+        updated() {},
+        destroyed() {}
     }
 </script>
 

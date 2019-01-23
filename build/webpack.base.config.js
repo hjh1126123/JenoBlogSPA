@@ -23,7 +23,7 @@ module.exports = {
         alias: {
             'public' : resolve('../public'),
             'src' : resolve('../src'),
-            'components' : resolve('../src/components'),
+            'h-components' : resolve('../src/components/h-components'),
             'views' : resolve('../src/views'),
             'stores' : resolve('../src/store/modules'),
             'styles' : resolve('../src/style')
