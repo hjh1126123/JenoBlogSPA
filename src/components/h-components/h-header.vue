@@ -14,6 +14,14 @@
                     </router-link>
                 </li>
             </ul>
+            <form class="header-serach">
+                <div class="icon-content">
+                    <span class="icon iconfont icon-search"></span>
+                </div>
+                <div class="search-content">
+                    <input type="search" placeholder="搜索 博文&日志" class="serach"/>
+                </div>
+            </form>
         </div>
     </div>
 </template>
@@ -79,7 +87,6 @@
             margin auto;
             width 1200px;
 
-
             justify-content center;
             align-items center;
 
@@ -87,9 +94,10 @@
 
             .header-logo {
                 height 100%;
-                position relative;
+
                 font-size Font-LL;
 
+                position relative;
                 left -80px;
 
                 display flex;
@@ -152,6 +160,73 @@
 
                 > li:not(:first-child) {
                     margin-left 80px;
+                }
+            }
+
+            .header-serach {
+                position relative;
+                right -80px;
+
+                display: table;
+                width: 51px;
+
+                .icon-content {
+                    position: relative;
+                    height: 50px;
+                    width: 50px;
+
+                    z-index: 2;
+
+                    background-color: sub-primary;
+
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    .icon {
+                        font-size Font-L;
+                    }
+                }
+
+
+                .search-content {
+                    position absolute;
+                    top 0;
+                    left 0;
+                    z-index 1;
+
+                    input.serach {
+                        -webkit-transition all 0.5s;
+                        -moz-transition all 0.5s;
+                        -ms-transition all 0.5s;
+                        -o-transition all 0.5s;
+                        transition all 0.5s;
+
+                        padding 0;
+                        height 50px;
+                        width 50px;
+
+                        border none;
+                        outline none;
+
+                        &:focus {
+                            border none;
+                            outline none;
+
+                            padding-left 60px;
+                            padding-right 10px;
+                            width 300px;
+                        }
+                    }
+                }
+
+
+                &:hover > .search-content input.serach {
+                    border none;
+                    outline none;
+                    padding-left: 60px;
+                    padding-right: 10px;
+                    width: 300px;
                 }
             }
         }

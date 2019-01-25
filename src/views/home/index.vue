@@ -1,13 +1,26 @@
 <template>
     <div>
-        <p>你好，我是home，欢迎步入SSR</p>
+        <h-card>
+            <h-delay-div>
+                <p>我能怎么办，我也很绝望啊!</p>
+            </h-delay-div>
+            <h-delay-div delay="200ms">
+                <p>我能怎么办，我也很绝望啊!</p>
+            </h-delay-div>
+            <h-delay-div delay="400ms">
+                <p>我能怎么办，我也很绝望啊!</p>
+            </h-delay-div>
+        </h-card>
     </div>
 </template>
 
 <script>
+    import hDelayDiv from 'h-components/h-delay-div.vue'
+    import hCard from 'h-components/h-card.vue'
+
     export default {
         name: "index",
-        title () {
+        title() {
             return "主页"
         },
         data() {
@@ -16,16 +29,27 @@
         methods: {},
         props: {},
         filters: {},
-        components: {},
+        components: {
+            hCard,
+            hDelayDiv
+        },
         computed: {},
-        mounted() {},
-        beforeDestroy() {},
-        beforeCreate() {},
-        created() {},
-        beforeMount() {},
-        beforeUpdate() {},
-        updated() {},
-        destroyed() {}
+        mounted() {
+        },
+        beforeDestroy() {
+        },
+        beforeCreate() {
+        },
+        created() {
+        },
+        beforeMount() {
+        },
+        beforeUpdate() {
+        },
+        updated() {
+        },
+        destroyed() {
+        }
     }
 </script>
 

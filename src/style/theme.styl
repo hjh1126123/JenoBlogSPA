@@ -1,16 +1,23 @@
 message = #FFCC99;
 primary = #66CCFF;
+sub-primary = #70eaff;
 success = #99CC99;
 disabled = #c5c8ce
 warn = #FFFF99;
 error = #FF6666;
 title = #fcfaff;
-icon = #808695;
+icon = #fff;
+background = #eeeeee
+tip = #9fa2a8;
 
 Font-LL = 30px;
 Font-L = 24px;
 Font-N = 18px;
 Font-Icon = 16px;
+
+body {
+  background-color background;
+}
 
 a {
   -webkit-touch-callout: none;
@@ -45,3 +52,11 @@ a:hover {
   color title;
 }
 
+.icon {
+  color icon;
+  font-size Font-Icon;
+}
+
+input::-webkit-input-placeholder {
+  color : tip;
+}

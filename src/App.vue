@@ -13,7 +13,7 @@
     import hHeader from 'h-components/h-header.vue'
 
     export default {
-        name: "header",
+        name: "app",
         data() {
             return {
                 items : [
@@ -71,5 +71,11 @@
 
     .fade-enter, .fade-leave-active {
         opacity 0
+    }
+
+    .view {
+        width 1200px;
+        margin-left auto;
+        margin-right auto;
     }
 </style>
