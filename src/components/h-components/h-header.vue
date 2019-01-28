@@ -184,6 +184,7 @@
                     vertical-align: middle;
 
                     .icon {
+                        color iWhite;
                         font-size Font-L;
                     }
                 }

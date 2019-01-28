@@ -2,18 +2,21 @@ message = #FFCC99;
 primary = #66CCFF;
 sub-primary = #70eaff;
 success = #99CC99;
-disabled = #c5c8ce
+disabled = #d4d7dd
 warn = #FFFF99;
 error = #FF6666;
 title = #fcfaff;
-icon = #fff;
-background = #eeeeee
+icon = #808695;
+background = #eeeeee;
 tip = #9fa2a8;
+iWhite = #fff;
 
+Font-LLL = 48px;
 Font-LL = 30px;
 Font-L = 24px;
-Font-N = 18px;
+Font-M = 18px;
 Font-Icon = 16px;
+Font-S = 14px;
 
 body {
   background-color background;
@@ -52,11 +55,30 @@ a:hover {
   color title;
 }
 
+input::-webkit-input-placeholder {
+  color : tip;
+}
+
+
 .icon {
   color icon;
   font-size Font-Icon;
 }
 
-input::-webkit-input-placeholder {
-  color : tip;
-}
+
+.line {
+    position relative;
+  }
+
+    .line:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e0e0e0;
+      /* 如果不用 background-color, 使用 border-top:1px solid #e0e0e0; */
+      -webkit-transform: scaleY(.5);
+      transform:scaleY(.5);
+    }

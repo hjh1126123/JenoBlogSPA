@@ -1,5 +1,5 @@
 <template>
-    <div class="container animated">
+    <div class="h-delay-div">
         <div class="aninode">
             <div :class="{'leftIn' : animation === 'left','topIn': animation === 'top'}"
                  :style="{'animation-delay' : delay ? delay : '0ms'}" style="animation-fill-mode: backwards!important;">
@@ -19,8 +19,13 @@
         props: {
             delay: String,
             animation: {
-                type : String,
-                default : 'left'
+                type: String,
+                default: 'left'
+            },
+            noCenter: Boolean,
+            width: {
+                type: String,
+                default: '100%'
             }
         },
         filters: {},
@@ -47,47 +52,46 @@
 
 <style lang="stylus">
 
-    .container {
-        width: 200px;
-        margin: 0 auto;
+    .h-delay-div {
+        width 100%;
+
+        .aninode {
+            visibility hidden;
+        }
     }
 
-    .aninode {
-        visibility: hidden;
+    .h-delay-div .aninode {
+        visibility visible;
     }
 
-    .animated .aninode {
-        visibility: visible;
+    .h-delay-div .topIn {
+        animation topIn 1s ease;
     }
 
-    .animated .topIn {
-        animation: topIn 1s ease;
-    }
-
-    .animated .leftIn {
-        animation-name: leftIn;
-        animation-duration: 1s;
+    .h-delay-div .leftIn {
+        animation-name leftIn;
+        animation-duration 1s;
     }
 
     @keyframes topIn {
         from {
-            transform: translateY(-20px)
-            opacity: 0;
+            transform translateY(-20px)
+            opacity 0;
         }
         to {
-            transform: translateY(0px)
-            opacity: 1;
+            transform translateY(0px)
+            opacity 1;
         }
     }
 
     @keyframes leftIn {
         from {
-            transform: translateX(-20px);
-            opacity: 0;
+            transform translateX(-20px);
+            opacity 0;
         }
         to {
-            transform: translateX(0px);
-            opacity: 1;
+            transform translateX(0px);
+            opacity 1;
         }
     }
 </style>
