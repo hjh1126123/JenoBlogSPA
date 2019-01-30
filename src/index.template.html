@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>{{ title }}</title>
     <meta charset="utf-8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" sizes="120x120" href="/public/page/logo-120.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/public/img/page/logo-120.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <link rel="shortcut icon" sizes="48x48" href="/public/page/logo-48.png">
+    <link rel="shortcut icon" sizes="48x48" href="/public/img/page/logo-48.png">
     <meta name="theme-color" content="#f60">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/public/font/iconfont.css">
     <link rel="stylesheet" href="/public/css/flex.css">
-    <style>
-      #skip a {  position:absolute;  left:-10000px;  top:auto;  width:1px;  height:1px;  overflow:hidden;  }
-      #skip a:focus {  position:static;  width:auto;  height:auto;  }
-    </style>
-  </head>
-  <body>
-  <div id="skip"><a href="#app">skip to content</a></div>
-  <!--vue-ssr-outlet-->
-  </body>
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/tool.css">
+</head>
+<body>
+<!--vue-ssr-outlet-->
+</body>
+
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script>
+    if(!ClipboardJS) {
+        document.write('<script src="/public/js/clipboard.min.js"><\/script>')
+    }
+</script>
 </html>

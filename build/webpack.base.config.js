@@ -26,7 +26,7 @@ module.exports = {
             'h-components' : resolve('../src/components/h-components'),
             'views' : resolve('../src/views'),
             'stores' : resolve('../src/store/modules'),
-            'styles' : resolve('../src/style')
+            'stylus' : resolve('../src/stylus')
         }
     },
     module: {
@@ -89,4 +89,4 @@ module.exports = {
             new VueLoaderPlugin(),
             new FriendlyErrorsPlugin()
         ]
-}
+};

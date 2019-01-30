@@ -1,0 +1,23 @@
+/*
+基础样式
+ */
+
+a:link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active {
+    text-decoration: none;
+    cursor: pointer
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer
+}

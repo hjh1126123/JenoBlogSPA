@@ -16,22 +16,22 @@
         name: "app",
         data() {
             return {
-                items : [
+                items: [
                     {
-                        to : '/web',
-                        label : 'Web'
+                        to: '/web',
+                        label: 'Web'
                     },
                     {
-                        to : '/desktop',
-                        label : 'Desktop'
+                        to: '/desktop',
+                        label: 'Desktop'
                     },
                     {
-                        to : '/server',
-                        label : 'Server'
+                        to: '/server',
+                        label: 'Server'
                     },
                     {
-                        to : '/unity',
-                        label : 'unity'
+                        to: '/unity',
+                        label: 'unity'
                     }
                 ]
             }
@@ -44,6 +44,13 @@
         },
         computed: {},
         mounted() {
+            this.$nextTick(() => {
+                if (ClipboardJS) {
+                    new ClipboardJS('.copy');
+                } else {
+                    console.error('复制组件失效');
+                }
+            });
         },
         beforeDestroy() {
         },
@@ -63,7 +70,12 @@
 </script>
 
 <style lang="stylus">
-    @import "~styles/reset.styl"
+    @import "~stylus/variable"
+    @import "~stylus/variable-class"
+
+    body {
+        background-color background;
+    }
 
     .fade-enter-active, .fade-leave-active {
         transition all .2s ease

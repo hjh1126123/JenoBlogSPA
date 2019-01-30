@@ -1,8 +1,10 @@
 <template>
     <div class="h-card" ref="card">
-        <div class="card-header">
-            <div class="main">
+        <div class="card-header" flex="main:justify">
+            <div class="main font-sm">
                 <slot name="title"></slot>
+            </div>
+            <div class="sub">
                 <slot name="sub-title"></slot>
             </div>
         </div>
@@ -45,34 +47,27 @@
 </script>
 
 <style lang="stylus">
-    @import "~styles/theme.styl"
+    @import "~stylus/variable"
 
     .h-card {
         border .5px solid disabled;
-        background-color white;
+        background-color light;
 
         margin 12px;
 
-
         .card-header {
             padding 12px 12px 12px 24px;
-
             .main {
-                font-weight bold
+                font-weight bold;
             }
-
-            .sub {
-                font-size Font-S;
-                color primary;
-            }
-        }
-
-        .card-split {
-
         }
 
         .card-content {
             padding 12px 12px 12px 24px;
+
+            > *:not(:first-child) {
+                margin-top 24px;
+            }
         }
 
         -webkit-transition all 0.5s;

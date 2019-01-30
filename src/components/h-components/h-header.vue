@@ -2,14 +2,15 @@
     <div class="h-header">
         <div class="header-content">
             <div v-if="title" class="header-logo">
-                <router-link to="/" @click.native="clear">
+                <router-link to="/" @click.native="clear" class="cant-select">
                     {{title}}
                 </router-link>
             </div>
             <ul class="header-nav">
                 <li v-for="(v,k) in items" :key="k">
                     <router-link :to="v.to" @click.native="clickNav(v.label)"
-                                 :class="{'item' : v.label !== click_label,'header-nav-chosed' : v.label === click_label}">
+                                 :class="{'item' : v.label !== click_label,'header-nav-chosed' : v.label === click_label}"
+                                 class="cant-select">
                         {{v.label}}
                     </router-link>
                 </li>
@@ -71,12 +72,20 @@
 </script>
 
 <style lang="stylus">
-    @import "~styles/theme.styl"
+    @import "~stylus/variable"
 
     .h-header {
         width 100%;
         height 80px;
         background-color primary
+
+        a:link {
+            color title;
+        }
+
+        a:visited {
+            color title;
+        }
 
         .header-content {
             height 100%;
@@ -182,13 +191,7 @@
                     display: table-cell;
                     text-align: center;
                     vertical-align: middle;
-
-                    .icon {
-                        color iWhite;
-                        font-size Font-L;
-                    }
                 }
-
 
                 .search-content {
                     position absolute;
@@ -220,7 +223,6 @@
                         }
                     }
                 }
-
 
                 &:hover > .search-content input.serach {
                     border none;

@@ -2,31 +2,31 @@
   "name": "Jeho Blog 1.0",
   "short_name": "Jlog 1.0",
   "icons": [{
-      "src": "/public/page/logo-120.png",
+      "src": "/public/img/page/logo-120.png",
       "sizes": "120x120",
       "type": "image/png"
     }, {
-      "src": "/public/page/logo-144.png",
+      "src": "/public/img/page/logo-144.png",
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "/public/page/logo-152.png",
+      "src": "/public/img/page/logo-152.png",
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "/public/page/logo-192.png",
+      "src": "/public/img/page/logo-192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "/public/page/logo-256.png",
+      "src": "/public/img/page/logo-256.png",
       "sizes": "256x256",
       "type": "image/png"
     }, {
-      "src": "/public/page/logo-384.png",
+      "src": "/public/img/page/logo-384.png",
       "sizes": "384x384",
       "type": "image/png"
     }, {
-    "src": "/public/page/logo-512.png",
+    "src": "/public/img/page/logo-512.png",
     "sizes": "512x512",
     "type": "image/png"
     }],

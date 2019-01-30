@@ -1,0 +1,211 @@
+/*
+工具集
+作者: hjh
+功能: 提供一些便利的样式解决方案，诺无标注作者，则为自制内容
+创建日期: 2018 01 30
+ */
+
+/*无法被框选*/
+.cant-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*分隔线*/
+.line {
+    position: relative;
+}
+.line:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #bfc0c2;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+/*
+对除了第一个以外的第一层级子标签进行操作
+*/
+/*向上间隔6px*/
+.child-mt-not-first-6 > *:not(:first-child) {
+    margin-top: 6px;
+}
+
+/*向上间隔12px*/
+.child-mt-not-first-12 > *:not(:first-child) {
+    margin-top: 12px;
+}
+
+/*向上间隔24px*/
+.child-mt-not-first-24 > *:not(:first-child) {
+    margin-top: 24px;
+}
+
+/*
+Tooltip
+author: Jase Smith
+url: https://webdesign.tutsplus.com/tutorials/css-tooltip-magic--cms-28082
+rebuild: hjh
+ */
+[tooltip] {
+    position: relative;
+}
+
+[tooltip]::before,
+[tooltip]::after {
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+
+    /* opinions */
+    text-transform: none;
+    font-size: .9em;
+}
+
+[tooltip]::before {
+    content: '';
+    z-index: 1001;
+    border: 5px solid transparent;
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    z-index: 1000;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1ch 1.5ch;
+    border-radius: .3ch;
+    box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+    background: #333;
+    color: #fff;
+}
+
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+    display: block;
+}
+
+[tooltip='']::before,
+[tooltip='']::after {
+    display: none !important;
+}
+
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+    /* ...
+    properties: values
+    ... */
+}
+
+/* ONLY the ::before */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+    bottom: 100%;
+    border-bottom-width: 0;
+    border-top-color: #333;
+}
+
+/* ONLY the ::after */
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+    bottom: calc(100% + 5px);
+}
+
+/* Both ::before & ::after */
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+    left: 50%;
+    transform: translate(-50%, -.5em);
+}
+
+[tooltip][flow^="down"]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #333;
+}
+
+[tooltip][flow^="down"]::after {
+    top: calc(100% + 5px);
+}
+
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+    left: 50%;
+    transform: translate(-50%, .5em);
+}
+
+[tooltip][flow^="left"]::before {
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #333;
+    left: calc(0em - 5px);
+    transform: translate(-.5em, -50%);
+}
+
+[tooltip][flow^="left"]::after {
+    top: 50%;
+    right: calc(100% + 5px);
+    transform: translate(-.5em, -50%);
+}
+
+[tooltip][flow^="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #333;
+    right: calc(0em - 5px);
+    transform: translate(.5em, -50%);
+}
+
+[tooltip][flow^="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translate(.5em, -50%);
+}
+
+@keyframes tooltips-vert {
+    to {
+        opacity: .9;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes tooltips-horz {
+    to {
+        opacity: .9;
+        transform: translate(0, -50%);
+    }
+}
+
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+    animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+    animation: tooltips-horz 300ms ease-out forwards;
+}
