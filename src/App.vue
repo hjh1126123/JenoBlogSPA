@@ -19,19 +19,23 @@
                 items: [
                     {
                         to: '/web',
-                        label: 'Web'
+                        label: 'Web',
+                        describe: 'web端应用(css,html,js,vue...) '
                     },
                     {
                         to: '/desktop',
-                        label: 'Desktop'
+                        label: 'Desktop',
+                        describe: '桌面端应用(winform,wpf...)'
                     },
                     {
                         to: '/server',
-                        label: 'Server'
+                        label: 'Server',
+                        describe: '服务器应用(webapi,wcf,socket...)'
                     },
                     {
                         to: '/unity',
-                        label: 'unity'
+                        label: 'unity',
+                        describe: 'unity当然就是unity游戏引擎相关内容啦...'
                     }
                 ]
             }

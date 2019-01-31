@@ -1,15 +1,16 @@
+import title from "../../util/title";
 <template>
-    <div flex="">
+    <div flex="main:justify box:mean">
         <div>
             <h-delay-div>
                 <h-card>
                     <div slot="title">
-                        <span class="icon iconfont icon-website"></span>
+                        <span class="icon iconfont icon-website" style="font-weight: unset;"></span>
                         网站说明
                     </div>
                     <div slot="sub-title">
                         <a href="https://github.com/hjh1126123/Jeho-Blog" target="view_window" class="cant-select"
-                           data-tooltip="点击进入Github地址">
+                           tooltip="项目源码" flow="left">
                             <i class="sub iconfont icon-github"></i>
                         </a>
                     </div>
@@ -21,7 +22,8 @@
                         <p>它包括以下知识点：</p>
                         <h-label textIndent="9em" class="content">前端开发(vue ssr, webpack, stylus...)</h-label>
                         <h-label textIndent="9em" class="content">后端开发(net core, webapi, docker...)</h-label>
-                        <h-label textIndent="9em" class="content">服务器架设[腾讯云服务器](centos 7, nodejs, pm2, nginx，cdn加速...)</h-label>
+                        <h-label textIndent="9em" class="content">服务器架设[腾讯云服务器](centos 7, nodejs, pm2, nginx，cdn加速...)
+                        </h-label>
                         <h-label textIndent="9em" class="content">数据库部署[阿里云数据库](数据表设计)</h-label>
                     </div>
                     <div class="child-mt-not-first-12">
@@ -34,10 +36,10 @@
                     </div>
                 </h-card>
             </h-delay-div>
-            <h-delay-div delay="400ms">
+            <h-delay-div delay="300ms">
                 <h-card>
                     <div slot="title">
-                        <span class="icon iconfont icon-descript"></span>
+                        <span class="icon iconfont icon-describe"></span>
                         内容说明
                     </div>
                     <div class="child-mt-not-first-6">
@@ -49,23 +51,89 @@
                     </div>
                 </h-card>
             </h-delay-div>
-            <h-delay-div delay="800ms">
+            <h-delay-div delay="600ms">
                 <h-card>
                     <div slot="title">
                         <span class="icon iconfont icon-authorize"></span>
                         转载说明
                     </div>
                     <div slot="sub-title">
-                        <a class="primary copy" :data-clipboard-text="Copyright" data-tooltip="点击复制授权信息">
+                        <a class="primary copy" :data-clipboard-text="Copyright" tooltip="复制授权信息" flow="left">
                             <i class="sub icon iconfont icon-copy"></i>
                         </a>
                     </div>
                     <p>欢迎各位转载分享网站内容，但请注明出处，原创不易，感谢支持.</p>
                 </h-card>
             </h-delay-div>
+            <h-delay-div delay="900ms">
+                <h-card>
+                    <div slot="title">
+                        <span class="icon iconfont icon-user"></span>
+                        关于
+                    </div>
+                    <div class="child-mt-not-first-6">
+                        <p>个人简介:</p>
+                        <h-label textIndent="5em" class="content">喜爱的技术: Vue, Net Core, WPF, WebApi, Unity</h-label>
+                        <h-label textIndent="5em" class="content">喜爱的游戏: LOL, Far cry 5, OW</h-label>
+                        <h-label textIndent="5em" class="content">编程外特长: 低等级的钢琴,很菜的编曲(老实说，我很想在这方面精进一下)</h-label>
+                        <h-label textIndent="5em" class="content">不擅长的事: 能言善辩，画画，唱歌，做饭...</h-label>
+                    </div>
+                    <div class="child-mt-not-first-12">
+                        <p>联系方式:</p>
+                        <p>
+                            <i class="sub font-m iconfont icon-qq"></i>
+                            <span class="sub font-m ml-6">945664458</span>
+                        </p>
+                        <p>
+                            <i class="sub font-m iconfont icon-email"></i>
+                            <span class="sub font-m ml-6">945664458@qq.com</span>
+                        </p>
+                    </div>
+                </h-card>
+            </h-delay-div>
         </div>
         <div>
-            <p>你好</p>
+            <h-card height="359" fixeld>
+                <div slot="title">
+                    最新文章
+                </div>
+                <h-list>
+                    <span class="content font-l" slot="title">我是标题</span>
+                    <p class="content" slot="text">文章内容是:.......................</p>
+                    <div slot="end">
+                        <p>
+                            <span class="sub">Jeho</span>
+                            <span class="sub ml-12">2019-01-31 15:07</span>
+                        </p>
+                        <p class="mt-6">
+                            <span class="error">阅读量</span>(1000)
+                            <span class="primary">评论</span>(1000)
+                            <span class="sub iconfont icon-goodjob"></span>(500)
+                        </p>
+                    </div>
+                </h-list>
+                <h-pagination></h-pagination>
+            </h-card>
+            <h-card>
+                <div slot="title">
+                    最新评论
+                </div>
+                <h-list>
+                    <div slot="title">
+                        <span class="content font-sm" slot="title">文章：我是标题</span>
+                    </div>
+                    <span class="sub font-s" slot="text">你这有问题啊??哪里是这么说的？？dwadaw </span>
+                    <div slot="end">
+                        <p>
+                            <span class="sub">hjh</span>
+                            <span class="sub ml-12">2019-01-31 15:07</span>
+                        </p>
+                        <p class="mt-6">
+                            <span class="primary">回复</span>(1000)
+                        </p>
+                    </div>
+                </h-list>
+            </h-card>
         </div>
     </div>
 </template>
@@ -74,6 +142,8 @@
     import hDelayDiv from 'h-components/h-delay-div.vue'
     import hCard from 'h-components/h-card.vue'
     import hLabel from 'h-components/h-label.vue'
+    import hList from 'h-components/h-list.vue'
+    import hPagination from 'h-components/h-pagination.vue'
 
     export default {
         name: "index",
@@ -95,7 +165,9 @@
         components: {
             hCard,
             hDelayDiv,
-            hLabel
+            hLabel,
+            hList,
+            hPagination
         },
         computed: {},
         mounted() {

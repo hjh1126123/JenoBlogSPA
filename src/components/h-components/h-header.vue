@@ -7,7 +7,7 @@
                 </router-link>
             </div>
             <ul class="header-nav">
-                <li v-for="(v,k) in items" :key="k">
+                <li v-for="(v,k) in items" :key="k" :tooltip="v.describe" flow="down">
                     <router-link :to="v.to" @click.native="clickNav(v.label)"
                                  :class="{'item' : v.label !== click_label,'header-nav-chosed' : v.label === click_label}"
                                  class="cant-select">
@@ -186,7 +186,7 @@
 
                     z-index: 2;
 
-                    background-color: sub-primary;
+                    background-color: light-primary;
 
                     display: table-cell;
                     text-align: center;

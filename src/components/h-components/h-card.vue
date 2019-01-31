@@ -1,15 +1,15 @@
 <template>
-    <div class="h-card" ref="card">
-        <div class="card-header" flex="main:justify">
-            <div class="main font-sm">
+    <div class="h-card" ref="card" :style="{'height' : height_computed}">
+        <div class="card-header" flex="main:justify" ref="header">
+            <div class="font-sm">
                 <slot name="title"></slot>
             </div>
             <div class="sub">
                 <slot name="sub-title"></slot>
             </div>
         </div>
-        <div class="card-split line"></div>
-        <div class="card-content">
+        <div class="line"></div>
+        <div class="card-content" style="overflow-y : auto;" ref="content">
             <slot></slot>
         </div>
     </div>
@@ -23,11 +23,23 @@
             return {}
         },
         methods: {},
-        props: {},
+        props: {
+            height: String,
+            fixeld: Boolean
+        },
         filters: {},
         components: {},
-        computed: {},
+        computed: {
+            height_computed() {
+                return this.height ? this.height + 'px' : 'auto';
+            }
+        },
         mounted() {
+            this.$nextTick(()=>{
+                if(this.fixeld){
+                    this.$refs.content.style.maxHeight = (Number(this.height) - this.$refs.header.scrollHeight - 24) + 'px';
+                }
+            });
         },
         beforeDestroy() {
         },
@@ -53,13 +65,10 @@
         border .5px solid disabled;
         background-color light;
 
-        margin 12px;
+        margin 12px 12px 0 12px;
 
         .card-header {
             padding 12px 12px 12px 24px;
-            .main {
-                font-weight bold;
-            }
         }
 
         .card-content {

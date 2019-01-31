@@ -31,6 +31,24 @@
     transform: scaleY(.5);
 }
 
+/*间距调整*/
+.mt-6 {
+    margin-top: 6px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+
+.ml-6 {
+    margin-left: 6px;
+}
+
+.ml-12 {
+    margin-left: 12px;
+}
+
 /*
 对除了第一个以外的第一层级子标签进行操作
 */
