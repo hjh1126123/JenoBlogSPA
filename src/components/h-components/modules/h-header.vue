@@ -7,12 +7,15 @@
                 </router-link>
             </div>
             <ul class="header-nav">
-                <li v-for="(v,k) in items" :key="k" :tooltip="v.describe" flow="down">
-                    <router-link :to="v.to" @click.native="clickNav(v.label)"
-                                 :class="{'item' : v.label !== click_label,'header-nav-chosed' : v.label === click_label}"
-                                 class="cant-select">
-                        {{v.label}}
-                    </router-link>
+                <li v-for="(v,k) in items" :key="k">
+                    <div  :tooltip="v.describe"
+                          flow="down" style="padding: 15px;">
+                        <router-link :to="v.to" @click.native="clickNav(v.label)"
+                                     :class="{'item' : v.label !== click_label,'header-nav-chosed' : v.label === click_label}"
+                                     class="cant-select">
+                            {{v.label}}
+                        </router-link>
+                    </div>
                 </li>
             </ul>
             <form class="header-serach">
@@ -166,6 +169,7 @@
                     }
 
                 }
+
 
                 > li:not(:first-child) {
                     margin-left 80px;

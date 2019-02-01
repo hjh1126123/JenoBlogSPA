@@ -1,4 +1,3 @@
-import title from "../../util/title";
 <template>
     <div flex="main:justify box:mean">
         <div>
@@ -112,7 +111,11 @@ import title from "../../util/title";
                         </p>
                     </div>
                 </h-list>
-                <h-pagination></h-pagination>
+                <h-pagination
+                        :page-count="20"
+                        :prev-text="'Prev'"
+                        :next-text="'Next'">
+                </h-pagination>
             </h-card>
             <h-card>
                 <div slot="title">
@@ -139,12 +142,6 @@ import title from "../../util/title";
 </template>
 
 <script>
-    import hDelayDiv from 'h-components/h-delay-div.vue'
-    import hCard from 'h-components/h-card.vue'
-    import hLabel from 'h-components/h-label.vue'
-    import hList from 'h-components/h-list.vue'
-    import hPagination from 'h-components/h-pagination.vue'
-
     export default {
         name: "index",
         title() {
@@ -162,13 +159,6 @@ import title from "../../util/title";
         methods: {},
         props: {},
         filters: {},
-        components: {
-            hCard,
-            hDelayDiv,
-            hLabel,
-            hList,
-            hPagination
-        },
         computed: {},
         mounted() {
         },

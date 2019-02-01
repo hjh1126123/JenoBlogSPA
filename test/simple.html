@@ -19,99 +19,96 @@
     <link rel="preload" href="/dist/manifest.js" as="script">
     <link rel="preload" href="/dist/vendor.js" as="script">
     <link rel="preload" href="/dist/app.js" as="script">
-    <link rel="preload" href="/dist/5.6635b63b1b2a789c9d11.hot-update.js" as="script">
     <link rel="preload" href="/dist/0.js" as="script">
     <link rel="prefetch" href="/dist/2.js">
     <link rel="prefetch" href="/dist/3.js">
     <link rel="prefetch" href="/dist/4.js">
     <link rel="prefetch" href="/dist/1.js">
-    <style data-vue-ssr-id="3a9e902f:0">
-        .primary[data-v-7ba5bd90] {
-            color: #6cf;
-        }
+    <style data-vue-ssr-id="4ae2c658:0">.primary {
+        color: #6cf;
+    }
 
-        .sub-primary[data-v-7ba5bd90] {
-            color: #70eaff;
-        }
+    .sub-primary {
+        color: sub-primary;
+    }
 
-        .success[data-v-7ba5bd90] {
-            color: #9c9;
-        }
+    .success {
+        color: #9c9;
+    }
 
-        .message[data-v-7ba5bd90] {
-            color: #fc9;
-        }
+    .message {
+        color: #fc9;
+    }
 
-        .warn[data-v-7ba5bd90] {
-            color: #ff9;
-        }
+    .warn {
+        color: #ff9;
+    }
 
-        .error[data-v-7ba5bd90] {
-            color: #f66;
-        }
+    .error {
+        color: #f66;
+    }
 
-        .title[data-v-7ba5bd90] {
-            color: #fcfaff;
-        }
+    .title {
+        color: #fcfaff;
+    }
 
-        .content[data-v-7ba5bd90] {
-            color: #515a6e;
-        }
+    .content {
+        color: #515a6e;
+    }
 
-        .sub[data-v-7ba5bd90] {
-            color: #808695;
-        }
+    .sub {
+        color: #808695;
+    }
 
-        .disabled[data-v-7ba5bd90] {
-            color: #c5c8ce;
-        }
+    .disabled {
+        color: #c5c8ce;
+    }
 
-        .font-lll[data-v-7ba5bd90] {
-            font-size: 48px;
-        }
+    .font-lll {
+        font-size: 48px;
+    }
 
-        .font-ll[data-v-7ba5bd90] {
-            font-size: 30px;
-        }
+    .font-ll {
+        font-size: 30px;
+    }
 
-        .font-l[data-v-7ba5bd90] {
-            font-size: 24px;
-        }
+    .font-l {
+        font-size: 24px;
+    }
 
-        .font-m[data-v-7ba5bd90] {
-            font-size: 18px;
-        }
+    .font-m {
+        font-size: 18px;
+    }
 
-        .font-sm[data-v-7ba5bd90] {
-            font-size: 16px;
-        }
+    .font-sm {
+        font-size: 16px;
+    }
 
-        .font-s[data-v-7ba5bd90] {
-            font-size: 14px;
-        }
+    .font-s {
+        font-size: 14px;
+    }
 
-        body[data-v-7ba5bd90] {
-            background-color: #eee;
-        }
+    body {
+        background-color: #eee;
+    }
 
-        .fade-enter-active[data-v-7ba5bd90],
-        .fade-leave-active[data-v-7ba5bd90] {
-            transition: all 0.2s ease;
-        }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: all 0.2s ease;
+    }
 
-        .fade-enter[data-v-7ba5bd90],
-        .fade-leave-active[data-v-7ba5bd90] {
-            opacity: 0;
-        }
+    .fade-enter,
+    .fade-leave-active {
+        opacity: 0;
+    }
 
-        .view[data-v-7ba5bd90] {
-            width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .view {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     </style>
-    <style data-vue-ssr-id="41ebca86:0">
-        .h-header {
+    <style data-vue-ssr-id="41ebca86:0">.h-header {
         width: 100%;
         height: 80px;
         background-color: #6cf;
@@ -254,13 +251,7 @@
         width: 300px;
     }
     </style>
-    <style data-vue-ssr-id="6019bbaa:0">
-        .descript-mine {
-        width: 600px;
-    }
-    </style>
-    <style data-vue-ssr-id="bf2fd682:0">
-        .h-delay-div {
+    <style data-vue-ssr-id="bf2fd682:0">.h-delay-div {
         width: 100%;
     }
 
@@ -369,11 +360,10 @@
         }
     }
     </style>
-    <style data-vue-ssr-id="0636c6dd:0">
-        .h-card {
+    <style data-vue-ssr-id="0636c6dd:0">.h-card {
         border: 0.5px solid #c5c8ce;
         background-color: #ffeef8;
-        margin: 12px;
+        margin: 12px 12px 0 12px;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -383,10 +373,6 @@
 
     .h-card .card-header {
         padding: 12px 12px 12px 24px;
-    }
-
-    .h-card .card-header .main {
-        font-weight: bold;
     }
 
     .h-card .card-content {
@@ -401,25 +387,33 @@
         box-shadow: 1px 2px 2px 2px #c5c8ce;
     }
     </style>
+    <style data-vue-ssr-id="63a3649d:0">.h-list .box {
+        cursor: pointer;
+    }
+
+    .h-list .box .list-text-end {
+        text-align: right;
+    }
+    </style>
 </head>
 <body>
-<div id="app" data-server-rendered="true" data-v-7ba5bd90>
-    <div class="h-header" data-v-7ba5bd90>
+<div id="app" data-server-rendered="true">
+    <div class="h-header">
         <div class="header-content">
             <div class="header-logo"><a href="/" class="cant-select router-link-active">
                 Jeho博客
             </a></div>
             <ul class="header-nav">
-                <li><a href="/web" class="cant-select item">
+                <li tooltip="web端应用(css,html,js,vue...) " flow="down"><a href="/web" class="cant-select item">
                     Web
                 </a></li>
-                <li><a href="/desktop" class="cant-select item">
+                <li tooltip="桌面端应用(winform,wpf...)" flow="down"><a href="/desktop" class="cant-select item">
                     Desktop
                 </a></li>
-                <li><a href="/server" class="cant-select item">
+                <li tooltip="服务器应用(webapi,wcf,socket...)" flow="down"><a href="/server" class="cant-select item">
                     Server
                 </a></li>
-                <li><a href="/unity" class="cant-select item">
+                <li tooltip="unity当然就是unity游戏引擎相关内容啦..." flow="down"><a href="/unity" class="cant-select item">
                     unity
                 </a></li>
             </ul>
@@ -429,88 +423,199 @@
             </form>
         </div>
     </div>
-    <div class="view" data-v-7ba5bd90 data-v-7ba5bd90>
-        <div class="descript-mine">
-            <div class="h-delay-div">
+    <div flex="main:justify box:mean" class="view" data-v-5954443c>
+        <div data-v-5954443c>
+            <div class="h-delay-div" data-v-5954443c>
                 <div class="aninode">
                     <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:0ms;">
-                        <div class="h-card">
+                        <div class="h-card" style="height:auto;" data-v-5954443c>
                             <div flex="main:justify" class="card-header">
-                                <div class="main font-sm">
-                                    <div><span class="icon iconfont icon-website"></span>
+                                <div class="font-sm">
+                                    <div data-v-5954443c><span class="icon iconfont icon-website"
+                                                               style="font-weight:unset;" data-v-5954443c></span>
                                         网站说明
                                     </div>
                                 </div>
                                 <div class="sub">
-                                    <div><a href="https://github.com/hjh1126123/Jeho-Blog" target="view_window"
-                                            data-tooltip="点击进入Github地址" class="cant-select"><i
-                                            class="sub iconfont icon-github"></i></a></div>
+                                    <div data-v-5954443c><a href="https://github.com/hjh1126123/Jeho-Blog"
+                                                            target="view_window" tooltip="项目源码" flow="left"
+                                                            class="cant-select" data-v-5954443c><i
+                                            class="sub iconfont icon-github" data-v-5954443c></i></a></div>
                                 </div>
                             </div>
-                            <div class="card-split line"></div>
-                            <div class="card-content">
-                                <div class="child-mt-not-first-6"><p>该网站已在Github上开源，以供大家交流学习</p></div>
-                                <div class="child-mt-not-first-6"><p>并且会在博客内更新该博客网站从零开始到上线部署的所有过程</p>
-                                    <p>它包括以下知识点：</p>
-                                    <p class="content" style="text-indent:9em;">前端开发(vue ssr, webpack, stylus...)</p>
-                                    <p class="content" style="text-indent:9em;">后端开发(net core, webapi, docker...)</p>
-                                    <p class="content" style="text-indent:9em;">服务器架设[腾讯云服务器](centos 7, nodejs, pm2,
-                                        nginx，cdn加速...)</p>
-                                    <p class="content" style="text-indent:9em;">数据库部署[阿里云数据库](数据表设计)</p></div>
-                                <div class="child-mt-not-first-12"><p>可能有人会问，为什么服务器和数据库不是出自同一家公司?</p>
-                                    <p>让我来回答你吧，对于我这种穷人来说，肯定是哪边便宜买哪边罗</p>
-                                    <p>然后，在我...</p>
-                                    <p>刚好想玩服务器的时候，腾讯云打折</p>
-                                    <p>刚好想玩数据库的时候，阿里云打折</p>
-                                    <p>所以俩边的市场大佬，多打打折呗 (*^~^*)</p></div>
+                            <div class="line"></div>
+                            <div class="card-content" style="overflow-y : auto;">
+                                <div class="child-mt-not-first-6" data-v-5954443c><p data-v-5954443c>
+                                    该网站已在Github上开源，以供大家交流学习</p></div>
+                                <div class="child-mt-not-first-6" data-v-5954443c><p data-v-5954443c>
+                                    并且会在博客内更新该博客网站从零开始到上线部署的所有过程</p>
+                                    <p data-v-5954443c>它包括以下知识点：</p>
+                                    <p class="content" style="text-indent:9em;" data-v-5954443c>前端开发(vue ssr, webpack,
+                                        stylus...)</p>
+                                    <p class="content" style="text-indent:9em;" data-v-5954443c>后端开发(net core, webapi,
+                                        docker...)</p>
+                                    <p class="content" style="text-indent:9em;" data-v-5954443c>服务器架设[腾讯云服务器](centos 7,
+                                        nodejs, pm2, nginx，cdn加速...)
+                                    </p>
+                                    <p class="content" style="text-indent:9em;" data-v-5954443c>数据库部署[阿里云数据库](数据表设计)</p>
+                                </div>
+                                <div class="child-mt-not-first-12" data-v-5954443c><p data-v-5954443c>
+                                    可能有人会问，为什么服务器和数据库不是出自同一家公司?</p>
+                                    <p data-v-5954443c>让我来回答你吧，对于我这种穷人来说，肯定是哪边便宜买哪边罗</p>
+                                    <p data-v-5954443c>然后，在我...</p>
+                                    <p data-v-5954443c>刚好想玩服务器的时候，腾讯云打折</p>
+                                    <p data-v-5954443c>刚好想玩数据库的时候，阿里云打折</p>
+                                    <p data-v-5954443c>所以俩边的市场大佬，多打打折呗 (*^~^*)</p></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="h-delay-div">
+            <div class="h-delay-div" data-v-5954443c>
                 <div class="aninode">
-                    <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:400ms;">
-                        <div class="h-card">
+                    <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:300ms;">
+                        <div class="h-card" style="height:auto;" data-v-5954443c>
                             <div flex="main:justify" class="card-header">
-                                <div class="main font-sm">
-                                    <div><span class="icon iconfont icon-descript"></span>
+                                <div class="font-sm">
+                                    <div data-v-5954443c><span class="icon iconfont icon-describe"
+                                                               data-v-5954443c></span>
                                         内容说明
                                     </div>
                                 </div>
                                 <div class="sub"></div>
                             </div>
-                            <div class="card-split line"></div>
-                            <div class="card-content">
-                                <div class="child-mt-not-first-6"><p>网站所有内容诺没署名，均为原创</p></div>
-                                <div class="child-mt-not-first-6"><p>因为水平有限，诺是有我说错的地方（或者仅仅只是怀疑我说错了），都可以在评论区指出 :)</p>
-                                    <p>我会去进行验证和仔细查阅相关资料来尽量确认文章的准确性</p></div>
+                            <div class="line"></div>
+                            <div class="card-content" style="overflow-y : auto;">
+                                <div class="child-mt-not-first-6" data-v-5954443c><p data-v-5954443c>网站所有内容诺没署名，均为原创</p>
+                                </div>
+                                <div class="child-mt-not-first-6" data-v-5954443c><p data-v-5954443c>
+                                    因为水平有限，诺是有我说错的地方（或者仅仅只是怀疑我说错了），都可以在评论区指出 :)</p>
+                                    <p data-v-5954443c>我会去进行验证和仔细查阅相关资料来尽量确认文章的准确性</p></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="h-delay-div">
+            <div class="h-delay-div" data-v-5954443c>
                 <div class="aninode">
-                    <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:800ms;">
-                        <div class="h-card">
+                    <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:600ms;">
+                        <div class="h-card" style="height:auto;" data-v-5954443c>
                             <div flex="main:justify" class="card-header">
-                                <div class="main font-sm">
-                                    <div><span class="icon iconfont icon-authorize"></span>
+                                <div class="font-sm">
+                                    <div data-v-5954443c><span class="icon iconfont icon-authorize"
+                                                               data-v-5954443c></span>
                                         转载说明
                                     </div>
                                 </div>
                                 <div class="sub">
-                                    <div>
-                                        <a data-clipboard-text="该文转载至&lt;a href=&quot;http://www.gamebyhjh.com/&quot;&gt;Jeho的个人网站&lt;/a&gt;
+                                    <div data-v-5954443c><a
+                                            data-clipboard-text="该文转载至&lt;a href=&quot;http://www.gamebyhjh.com/&quot;&gt;Jeho的个人网站&lt;/a&gt;
 ------
-研究课题：vue，unity，桌面应用，服务器" data-tooltip="点击复制授权信息" class="primary copy"><i class="sub icon iconfont icon-copy"></i></a>
-                                    </div>
+研究课题：vue，unity，桌面应用，服务器" tooltip="复制授权信息" flow="left" class="primary copy" data-v-5954443c><i
+                                            class="sub icon iconfont icon-copy" data-v-5954443c></i></a></div>
                                 </div>
                             </div>
-                            <div class="card-split line"></div>
-                            <div class="card-content"><p>欢迎各位转载分享网站内容，但请注明出处，原创不易，感谢支持.</p></div>
+                            <div class="line"></div>
+                            <div class="card-content" style="overflow-y : auto;"><p data-v-5954443c>
+                                欢迎各位转载分享网站内容，但请注明出处，原创不易，感谢支持.</p></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-delay-div" data-v-5954443c>
+                <div class="aninode">
+                    <div class="leftIn" style="animation-fill-mode:backwards!important;animation-delay:900ms;">
+                        <div class="h-card" style="height:auto;" data-v-5954443c>
+                            <div flex="main:justify" class="card-header">
+                                <div class="font-sm">
+                                    <div data-v-5954443c><span class="icon iconfont icon-user" data-v-5954443c></span>
+                                        关于
+                                    </div>
+                                </div>
+                                <div class="sub"></div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="card-content" style="overflow-y : auto;">
+                                <div class="child-mt-not-first-6" data-v-5954443c><p data-v-5954443c>个人简介:</p>
+                                    <p class="content" style="text-indent:5em;" data-v-5954443c>喜爱的技术: Vue, Net Core,
+                                        WPF, WebApi, Unity</p>
+                                    <p class="content" style="text-indent:5em;" data-v-5954443c>喜爱的游戏: LOL, Far cry 5,
+                                        OW</p>
+                                    <p class="content" style="text-indent:5em;" data-v-5954443c>编程外特长:
+                                        低等级的钢琴,很菜的编曲(老实说，我很想在这方面精进一下)</p>
+                                    <p class="content" style="text-indent:5em;" data-v-5954443c>不擅长的事:
+                                        能言善辩，画画，唱歌，做饭...</p></div>
+                                <div class="child-mt-not-first-12" data-v-5954443c><p data-v-5954443c>联系方式:</p>
+                                    <p data-v-5954443c><i class="sub font-m iconfont icon-qq" data-v-5954443c></i><span
+                                            class="sub font-m ml-6" data-v-5954443c>945664458</span></p>
+                                    <p data-v-5954443c><i class="sub font-m iconfont icon-email"
+                                                          data-v-5954443c></i><span class="sub font-m ml-6"
+                                                                                    data-v-5954443c>945664458@qq.com</span>
+                                    </p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-v-5954443c>
+            <div class="h-card" style="height:359px;" data-v-5954443c>
+                <div flex="main:justify" class="card-header">
+                    <div class="font-sm">
+                        <div data-v-5954443c>
+                            最新文章
+                        </div>
+                    </div>
+                    <div class="sub"></div>
+                </div>
+                <div class="line"></div>
+                <div class="card-content" style="overflow-y : auto;">
+                    <div class="h-list" data-v-5954443c>
+                        <div flex="dir:top cross:stretch" class="box child-mt-not-first-12">
+                            <div class="list-title"><span class="content font-l" data-v-5954443c>我是标题</span></div>
+                            <div flex-box="1" class="list-text"><p class="content" data-v-5954443c>
+                                文章内容是:.......................</p></div>
+                            <div class="list-text-end">
+                                <div data-v-5954443c><p data-v-5954443c><span class="sub"
+                                                                              data-v-5954443c>Jeho</span><span
+                                        class="sub ml-12" data-v-5954443c>2019-01-31 15:07</span></p>
+                                    <p class="mt-6" data-v-5954443c><span class="error" data-v-5954443c>阅读量</span>(1000)
+                                        <span class="primary" data-v-5954443c>评论</span>(1000)
+                                        <span class="sub iconfont icon-goodjob" data-v-5954443c></span>(500)
+                                    </p></div>
+                            </div>
+                        </div>
+                        <div class="mt-12 line"></div>
+                    </div><!----></div>
+            </div>
+            <div class="h-card" style="height:auto;" data-v-5954443c>
+                <div flex="main:justify" class="card-header">
+                    <div class="font-sm">
+                        <div data-v-5954443c>
+                            最新评论
+                        </div>
+                    </div>
+                    <div class="sub"></div>
+                </div>
+                <div class="line"></div>
+                <div class="card-content" style="overflow-y : auto;">
+                    <div class="h-list" data-v-5954443c>
+                        <div flex="dir:top cross:stretch" class="box child-mt-not-first-12">
+                            <div class="list-title">
+                                <div data-v-5954443c><span slot="title" class="content font-sm"
+                                                           data-v-5954443c>文章：我是标题</span></div>
+                            </div>
+                            <div flex-box="1" class="list-text"><span class="sub font-s" data-v-5954443c>你这有问题啊??哪里是这么说的？？dwadaw </span>
+                            </div>
+                            <div class="list-text-end">
+                                <div data-v-5954443c><p data-v-5954443c><span class="sub"
+                                                                              data-v-5954443c>hjh</span><span
+                                        class="sub ml-12" data-v-5954443c>2019-01-31 15:07</span></p>
+                                    <p class="mt-6" data-v-5954443c><span class="primary" data-v-5954443c>回复</span>(1000)
+                                    </p></div>
+                            </div>
+                        </div>
+                        <div class="mt-12 line"></div>
                     </div>
                 </div>
             </div>
@@ -523,29 +628,12 @@
     "items": {},
     "users": {},
     "lists": {},
-    "route": {
-        "path": "\u002Fhome",
-        "hash": "",
-        "query": {},
-        "params": {},
-        "fullPath": "\u002Fhome",
-        "meta": {},
-        "from": {
-            "name": null,
-            "path": "\u002F",
-            "hash": "",
-            "query": {},
-            "params": {},
-            "fullPath": "\u002F",
-            "meta": {}
-        }
-    }
+    "route": {"path": "\u002Fhome", "hash": "", "query": {}, "params": {}, "fullPath": "\u002Fhome", "meta": {}}
 }</script>
 <script src="/dist/manifest.js" defer></script>
 <script src="/dist/0.js" defer></script>
 <script src="/dist/vendor.js" defer></script>
 <script src="/dist/app.js" defer></script>
-<script src="/dist/5.6635b63b1b2a789c9d11.hot-update.js" defer></script>
 </body>
 
 <script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>

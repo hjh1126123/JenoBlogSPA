@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-
         <h-header title="Jeho博客" :items="items"></h-header>
 
         <transition name="fade" mode="out-in">
@@ -10,8 +9,6 @@
 </template>
 
 <script>
-    import hHeader from 'h-components/h-header.vue'
-
     export default {
         name: "app",
         data() {
@@ -43,9 +40,7 @@
         methods: {},
         props: {},
         filters: {},
-        components: {
-            hHeader
-        },
+        components: {},
         computed: {},
         mounted() {
             this.$nextTick(() => {
