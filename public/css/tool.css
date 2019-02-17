@@ -19,6 +19,7 @@
 .line {
     position: relative;
 }
+
 .line:after {
     content: " ";
     position: absolute;
@@ -47,6 +48,26 @@
 
 .ml-12 {
     margin-left: 12px;
+}
+
+.pa-6 {
+    padding: 6px;
+}
+
+.pa-12 {
+    padding: 12px;
+}
+
+.pt-6 {
+    padding-top: 6px;
+}
+
+.pt-12 {
+    padding-top: 12px;
+}
+
+.pl-0 {
+    padding-left: 0px;
 }
 
 /*

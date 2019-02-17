@@ -198,7 +198,6 @@
                 transition all 0.5s;
 
                 padding 8px;
-                box-shadow 0 2px 2px 0 disabled;
             }
         }
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-card" ref="card" :style="{'height' : height_computed}">
+    <div class="h-card" ref="card" :style="{'height' : height_computed}" flex="dir:top main:justify">
         <div class="card-header" flex="main:justify" ref="header">
             <div class="font-sm">
                 <slot name="title"></slot>
@@ -11,6 +11,9 @@
         <div class="line"></div>
         <div class="card-content" style="overflow-y : auto;" ref="content">
             <slot></slot>
+        </div>
+        <div>
+            <slot name="footer"></slot>
         </div>
     </div>
 </template>
@@ -35,8 +38,8 @@
             }
         },
         mounted() {
-            this.$nextTick(()=>{
-                if(this.fixeld){
+            this.$nextTick(() => {
+                if (this.fixeld) {
                     this.$refs.content.style.maxHeight = (Number(this.height) - this.$refs.header.scrollHeight - 24) + 'px';
                 }
             });
@@ -65,13 +68,16 @@
         border .5px solid disabled;
         background-color light;
 
-        margin 12px 12px 0 12px;
+        margin-top 10px;
+        margin-left 12px;
+        margin-right 12px;
 
         .card-header {
             padding 12px 12px 12px 24px;
         }
 
         .card-content {
+            height 100%;
             padding 12px 12px 12px 24px;
 
             > *:not(:first-child) {

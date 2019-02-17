@@ -92,51 +92,67 @@
             </h-delay-div>
         </div>
         <div>
-            <h-card height="359" fixeld>
-                <div slot="title">
-                    最新文章
+            <h-delay-div class="pa-12">
+                <p class="font-sm pa-12 pl-0">
+                    <i class="sub font-m iconfont icon-qq"></i>
+                    最近博文
+                </p>
+                <h-delay-div v-for="k in 3" :key="k" :delay="`${k*100}` + 'ms'">
+                    <h-list>
+                        <a class="cant-select content font-l" slot="title">我是标题</a>
+                        <p class="content" slot="text">文章内容是:.......................</p>
+                        <div slot="end">
+                            <p>
+                                <span class="sub">Jeho</span>
+                                <span class="sub ml-12">2019-01-31 15:07</span>
+                            </p>
+                            <p class="cant-select mt-6">
+                                <a class="error">阅读量</a>(1000)
+                                <a class="primary">评论</a>(1000)
+                                <a class="sub iconfont icon-goodjob"></a>(500)
+                            </p>
+                        </div>
+                    </h-list>
+                </h-delay-div>
+                <div class="mt-12">
+                    <h-pagination
+                            :page-count="20"
+                            :prev-text="'Prev'"
+                            :next-text="'Next'">
+                    </h-pagination>
                 </div>
-                <h-list>
-                    <span class="content font-l" slot="title">我是标题</span>
-                    <p class="content" slot="text">文章内容是:.......................</p>
-                    <div slot="end">
-                        <p>
-                            <span class="sub">Jeho</span>
-                            <span class="sub ml-12">2019-01-31 15:07</span>
-                        </p>
-                        <p class="mt-6">
-                            <span class="error">阅读量</span>(1000)
-                            <span class="primary">评论</span>(1000)
-                            <span class="sub iconfont icon-goodjob"></span>(500)
-                        </p>
-                    </div>
-                </h-list>
-                <h-pagination
-                        :page-count="20"
-                        :prev-text="'Prev'"
-                        :next-text="'Next'">
-                </h-pagination>
-            </h-card>
-            <h-card>
-                <div slot="title">
-                    最新评论
+            </h-delay-div>
+            <h-delay-div class="pa-12">
+                <p class="font-sm pa-12 pl-0">
+                    <i class="sub font-m iconfont icon-qq"></i>
+                    最近公告
+                </p>
+                <h-delay-div v-for="k in 3" :key="k" :delay="`${k*100}` + 'ms'">
+                    <h-list>
+                        <a class="cant-select content font-l" slot="title">我是标题</a>
+                        <p class="content" slot="text">文章内容是:.......................</p>
+                        <div slot="end">
+                            <p>
+                                <span class="sub">Jeho</span>
+                                <span class="sub ml-12">2019-01-31 15:07</span>
+                            </p>
+                            <p class="cant-select mt-6">
+                                <a class="error">阅读量</a>(1000)
+                                <a class="primary">评论</a>(1000)
+                                <a class="sub iconfont icon-goodjob"></a>(500)
+                            </p>
+                        </div>
+                    </h-list>
+                </h-delay-div>
+
+                <div class="mt-12">
+                    <h-pagination
+                            :page-count="20"
+                            :prev-text="'Prev'"
+                            :next-text="'Next'">
+                    </h-pagination>
                 </div>
-                <h-list>
-                    <div slot="title">
-                        <span class="content font-sm" slot="title">文章：我是标题</span>
-                    </div>
-                    <span class="sub font-s" slot="text">你这有问题啊??哪里是这么说的？？dwadaw </span>
-                    <div slot="end">
-                        <p>
-                            <span class="sub">hjh</span>
-                            <span class="sub ml-12">2019-01-31 15:07</span>
-                        </p>
-                        <p class="mt-6">
-                            <span class="primary">回复</span>(1000)
-                        </p>
-                    </div>
-                </h-list>
-            </h-card>
+            </h-delay-div>
         </div>
     </div>
 </template>
@@ -150,10 +166,10 @@
         data() {
             return {
                 Copyright: '该文转载至<a href="http://www.gamebyhjh.com/">Jeho的个人网站</a>' +
-                '\r\n' +
-                '------' +
-                '\r\n' +
-                '研究课题：vue，unity，桌面应用，服务器'
+                    '\r\n' +
+                    '------' +
+                    '\r\n' +
+                    '研究课题：vue，unity，桌面应用，服务器'
             }
         },
         methods: {},
@@ -161,6 +177,7 @@
         filters: {},
         computed: {},
         mounted() {
+
         },
         beforeDestroy() {
         },

@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-import home from './modules/home'
 import web from './modules/web'
 import desktop from './modules/desktop'
 import server from './modules/server'
@@ -18,11 +17,21 @@ const router = new Router({
             path: '/',
             redirect: '/home'
         },
-        ...home,
-        ...web,
-        ...desktop,
-        ...server,
-        ...unity
+        {
+            path: '/home',
+            component: () => import('views/home/index.vue')
+        },
+        {
+            path: '/type',
+            component: () => import('views/child_View/index.vue'),
+            children: [
+                ...web,
+                ...desktop,
+                ...server,
+                ...unity
+            ]
+        },
+
     ]
 });
 

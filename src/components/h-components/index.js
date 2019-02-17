@@ -4,6 +4,7 @@ import delay from './modules/h-delay-div.vue'
 import label from './modules/h-label.vue'
 import list from './modules/h-list.vue'
 import pagination from './modules/h-pagination.vue'
+import loadding from './modules/h-loading.vue'
 
 const components = {
     header,
@@ -11,7 +12,8 @@ const components = {
     delay,
     label,
     list,
-    pagination
+    pagination,
+    loadding
 };
 
 const install = function (Vue) {

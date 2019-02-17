@@ -1,8 +1,6 @@
-const index = () => import('views/desktop/index.vue');
-
 export default [
     {
-        path: '/desktop',
-        component: index
+        path: '/type/desktop',
+        component: () => import('views/child_View/desktop/index.vue')
     }
 ]

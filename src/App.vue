@@ -1,10 +1,17 @@
 <template>
     <div id="app">
         <h-header title="Jeho博客" :items="items"></h-header>
-
         <transition name="fade" mode="out-in">
             <router-view class="view"></router-view>
         </transition>
+
+        <div class="center-in-page">
+            <transition name="fade" mode="out-in">
+                <h-loading v-if="loadding"></h-loading>
+            </transition>
+        </div>
+
+
     </div>
 </template>
 
@@ -15,22 +22,22 @@
             return {
                 items: [
                     {
-                        to: '/web',
+                        to: '/type/web',
                         label: 'Web',
                         describe: 'web端应用(css,html,js,vue...) '
                     },
                     {
-                        to: '/desktop',
+                        to: '/type/desktop',
                         label: 'Desktop',
                         describe: '桌面端应用(winform,wpf...)'
                     },
                     {
-                        to: '/server',
+                        to: '/type/server',
                         label: 'Server',
                         describe: '服务器应用(webapi,wcf,socket...)'
                     },
                     {
-                        to: '/unity',
+                        to: '/type/unity',
                         label: 'unity',
                         describe: 'unity当然就是unity游戏引擎相关内容啦...'
                     }
@@ -41,7 +48,11 @@
         props: {},
         filters: {},
         components: {},
-        computed: {},
+        computed: {
+            loadding() {
+                return this.$store.state.loadding
+            }
+        },
         mounted() {
             this.$nextTick(() => {
                 if (ClipboardJS) {
@@ -88,5 +99,14 @@
         width 1200px;
         margin-left auto;
         margin-right auto;
+    }
+
+    .center-in-page {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 </style>

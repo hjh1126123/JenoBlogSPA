@@ -1,8 +1,6 @@
-const index = () => import('views/web/index.vue');
-
 export default [
     {
-        path: '/web',
-        component: index
+        path: '/type/web',
+        component: () => import('views/child_View/web/index.vue')
     }
 ]

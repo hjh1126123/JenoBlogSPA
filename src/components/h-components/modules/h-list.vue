@@ -11,7 +11,6 @@
                 <slot name="end"></slot>
             </div>
         </div>
-        <div class="mt-12 line"></div>
     </div>
 </template>
 
@@ -48,7 +47,6 @@
 <style lang="stylus">
     .h-list {
         .box {
-            cursor pointer;
             .list-text-end {
                 text-align right;
             }
